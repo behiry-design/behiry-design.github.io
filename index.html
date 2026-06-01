@@ -96,8 +96,12 @@
   .project-card { background: var(--card); border: 1px solid var(--border); border-radius: 1.2rem; overflow: hidden; transition: all 0.3s; display: flex; flex-direction: column; }
   .project-card:hover { border-color: rgba(79,142,247,0.3); transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
   .project-card.hidden { display: none; }
-  .project-video-thumb { width: 100%; height: 200px; overflow: hidden; }
+  .project-video-thumb { width: 100%; height: 200px; overflow: hidden; position: relative; }
   .project-video-thumb iframe { width: 100%; height: 100%; border: none; pointer-events: none; }
+  .video-overlay { position: absolute; inset: 0; z-index: 2; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.25); cursor: pointer; transition: background 0.2s; text-decoration: none; }
+  .video-overlay:hover { background: rgba(0,0,0,0.45); }
+  .video-play-btn { width: 52px; height: 52px; border-radius: 50%; background: rgba(255,255,255,0.95); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; transition: transform 0.2s; padding-left: 4px; }
+  .video-overlay:hover .video-play-btn { transform: scale(1.1); }
   .project-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
   .project-meta { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: var(--muted); margin-bottom: 0.5rem; }
   .project-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.75rem; }
@@ -339,6 +343,7 @@
       <div class="project-card reveal" data-tags="robotics ml embedded">
         <div class="project-video-thumb">
           <iframe src="https://www.youtube.com/embed/M6vWolPVRD4?mute=1&loop=1&playlist=M6vWolPVRD4" allowfullscreen></iframe>
+          <a class="video-overlay" href="https://www.youtube.com/watch?v=M6vWolPVRD4" target="_blank"><div class="video-play-btn">▶</div></a>
         </div>
         <div class="project-body">
           <div class="project-meta">Design of Mechatronics 2 · Feb 2026–Present</div>
@@ -356,6 +361,7 @@
       <div class="project-card reveal" data-tags="bio control">
         <div class="project-video-thumb">
           <iframe src="https://www.youtube.com/embed/7WJVmVotrQs?mute=1&loop=1&playlist=7WJVmVotrQs" allowfullscreen></iframe>
+          <a class="video-overlay" href="https://www.youtube.com/watch?v=7WJVmVotrQs" target="_blank"><div class="video-play-btn">▶</div></a>
         </div>
         <div class="card-photos" style="border-top:1px solid var(--border)">
           <div class="card-photo-wrap">
@@ -407,6 +413,7 @@
       <div class="project-card reveal" data-tags="automation">
         <div class="project-video-thumb">
           <iframe src="https://www.youtube.com/embed/onco1vv4gqw?mute=1&loop=1&playlist=onco1vv4gqw" allowfullscreen></iframe>
+          <a class="video-overlay" href="https://www.youtube.com/watch?v=onco1vv4gqw" target="_blank"><div class="video-play-btn">▶</div></a>
         </div>
         <div class="project-body">
           <div class="project-meta">MCT313 · Industrial Automation · Feb 2026–Present</div>
