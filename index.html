@@ -16,14 +16,14 @@
   html { scroll-behavior: smooth; }
   body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; }
   body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E"); pointer-events: none; z-index: 0; opacity: 0.4; }
- 
+
   /* NAV */
   nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 4rem; background: rgba(10,10,15,0.85); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
   .nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.2rem; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
   .nav-links { display: flex; gap: 2.5rem; list-style: none; }
   .nav-links a { font-size: 0.85rem; font-weight: 500; color: var(--muted); text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.2s; }
   .nav-links a:hover { color: var(--white); }
- 
+
   /* HERO */
   #hero { min-height: 100vh; display: flex; align-items: center; padding: 8rem 4rem 4rem; position: relative; overflow: hidden; }
   .hero-bg-orb { position: absolute; border-radius: 50%; filter: blur(120px); opacity: 0.15; pointer-events: none; }
@@ -48,25 +48,25 @@
   .hero-photo-wrap { position: relative; animation: fadeUp 0.8s ease 0.2s both; }
   .hero-photo-wrap::before { content: ''; position: absolute; inset: -3px; border-radius: 1.5rem; background: var(--gradient); z-index: 0; }
   .hero-photo { width: 300px; height: 360px; object-fit: cover; object-position: top; border-radius: 1.4rem; position: relative; z-index: 1; display: block; cursor: pointer; }
- 
+
   /* LIGHTBOX */
   .lightbox { position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 2000; display: flex; align-items: center; justify-content: center; padding: 2rem; opacity: 0; pointer-events: none; transition: opacity 0.3s; cursor: zoom-out; }
   .lightbox.open { opacity: 1; pointer-events: all; }
   .lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; border-radius: 0.75rem; box-shadow: 0 30px 100px rgba(0,0,0,0.8); }
   .lightbox-close { position: absolute; top: 1.5rem; right: 1.5rem; width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white; font-size: 1.2rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
   .lightbox-close:hover { background: rgba(255,255,255,0.2); }
- 
+
   /* CLICKABLE PHOTO */
   .clickable-photo { cursor: zoom-in; transition: transform 0.2s, box-shadow 0.2s; }
   .clickable-photo:hover { transform: scale(1.02); box-shadow: 0 8px 30px rgba(0,0,0,0.4); }
- 
+
   /* SECTIONS */
   section { padding: 6rem 4rem; position: relative; z-index: 1; }
   .section-inner { max-width: 1200px; margin: 0 auto; }
   .section-label { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--accent); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.75rem; }
   .section-title { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; letter-spacing: -0.02em; color: var(--white); margin-bottom: 3rem; }
   .section-title span { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
- 
+
   /* ABOUT */
   #about { background: var(--bg2); }
   .about-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 5rem; align-items: start; }
@@ -77,7 +77,7 @@
   .stat-card:hover { border-color: rgba(79,142,247,0.3); transform: translateY(-2px); }
   .stat-number { font-family: 'Syne', sans-serif; font-size: 1.8rem; font-weight: 800; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
   .stat-label { font-size: 0.8rem; color: var(--muted); margin-top: 0.25rem; }
- 
+
   /* SKILLS */
   #skills { background: var(--bg); }
   .skills-categories { display: flex; flex-direction: column; gap: 2rem; }
@@ -86,7 +86,7 @@
   .skill-pill { display: flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.2rem; background: var(--card); border: 1px solid var(--border); border-radius: 0.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; color: var(--text); transition: all 0.2s; }
   .skill-pill:hover { border-color: var(--accent); color: var(--white); transform: translateY(-2px); }
   .skill-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
- 
+
   /* PROJECTS */
   #projects { background: var(--bg2); }
   .filter-bar { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 3rem; }
@@ -114,7 +114,7 @@
   .proj-btn-primary:hover { opacity: 0.85; }
   .proj-btn-outline { background: transparent; border: 1px solid var(--border); color: var(--text); }
   .proj-btn-outline:hover { border-color: rgba(255,255,255,0.3); color: var(--white); }
- 
+
   /* PHOTO GRID inside cards */
   .card-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-bottom: 1px solid var(--border); }
   .card-photos.single { grid-template-columns: 1fr; }
@@ -124,7 +124,7 @@
   .card-photo-placeholder { width: 100%; height: 160px; background: linear-gradient(135deg, var(--bg3), var(--card)); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.4rem; border-right: 1px solid var(--border); }
   .card-photo-placeholder span { font-size: 2rem; }
   .card-photo-placeholder p { font-family: 'JetBrains Mono', monospace; font-size: 0.58rem; color: var(--muted); text-align: center; padding: 0 0.5rem; }
- 
+
   /* CERTIFICATE SLOT */
   .cert-section { padding: 0.75rem 1.5rem 1.25rem; }
   .cert-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--accent3); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.4rem; }
@@ -135,7 +135,7 @@
   .cert-placeholder { height: 80px; display: flex; align-items: center; justify-content: center; gap: 0.75rem; border: 2px dashed rgba(6,214,160,0.2); border-radius: 0.6rem; }
   .cert-placeholder span { font-size: 1.2rem; }
   .cert-placeholder p { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; color: var(--muted); }
- 
+
   /* MODAL */
   .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.85); backdrop-filter: blur(10px); z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 2rem; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
   .modal-overlay.open { opacity: 1; pointer-events: all; }
@@ -152,9 +152,30 @@
   .modal-body li { margin-bottom: 0.4rem; }
   .modal-video { width: 100%; aspect-ratio: 16/9; border-radius: 0.75rem; overflow: hidden; margin-top: 1rem; border: 1px solid var(--border); }
   .modal-video iframe { width: 100%; height: 100%; border: none; }
- 
+
+  /* GREENHOUSE */
+  #greenhouse { background: var(--bg); }
+  .greenhouse-hero { display: grid; grid-template-columns: 1.15fr 1fr; gap: 3.5rem; align-items: start; margin-bottom: 3rem; }
+  .greenhouse-text p { font-size: 1.02rem; line-height: 1.85; color: var(--muted); margin-bottom: 1.25rem; }
+  .greenhouse-text p strong { color: var(--text); }
+  .greenhouse-links { display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap; }
+  .greenhouse-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .greenhouse-features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-bottom: 3rem; }
+  .feature-card { background: var(--card); border: 1px solid var(--border); border-radius: 1rem; padding: 1.5rem; }
+  .feature-card .feature-icon { font-size: 1.4rem; margin-bottom: 0.6rem; }
+  .feature-card h4 { font-family: 'Syne', sans-serif; font-size: 0.98rem; color: var(--white); margin-bottom: 0.4rem; }
+  .feature-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.65; }
+  .gallery-label { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--muted); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem; }
+  .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; }
+  .gallery-item { position: relative; aspect-ratio: 4/3; border-radius: 0.75rem; overflow: hidden; background: var(--bg3); border: 1px solid var(--border); }
+  .gallery-item img { width: 100%; height: 100%; object-fit: cover; cursor: zoom-in; transition: transform 0.3s; display: block; }
+  .gallery-item img:hover { transform: scale(1.06); }
+  .gallery-placeholder { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.3rem; }
+  .gallery-placeholder span { font-size: 1.5rem; }
+  .gallery-placeholder p { font-family: 'JetBrains Mono', monospace; font-size: 0.55rem; color: var(--muted); text-align: center; padding: 0 0.4rem; }
+
   /* EXTRACURRICULARS */
-  #extracurriculars { background: var(--bg); }
+  #extracurriculars { background: var(--bg2); }
   .extra-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.5rem; }
   .extra-card { background: var(--card); border: 1px solid var(--border); border-radius: 1.2rem; overflow: hidden; transition: all 0.3s; }
   .extra-card:hover { border-color: rgba(79,142,247,0.3); transform: translateY(-3px); box-shadow: 0 16px 50px rgba(0,0,0,0.3); }
@@ -177,7 +198,7 @@
   .extra-photo-placeholder { height: 180px; background: var(--bg3); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.4rem; border-right: 1px solid var(--border); }
   .extra-photo-placeholder span { font-size: 2rem; }
   .extra-photo-placeholder p { font-family: 'JetBrains Mono', monospace; font-size: 0.58rem; color: var(--muted); text-align: center; padding: 0 0.75rem; }
- 
+
   /* CONTACT */
   #contact { background: var(--bg2); }
   .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
@@ -189,15 +210,15 @@
   .contact-link-icon { width: 40px; height: 40px; border-radius: 0.5rem; background: var(--bg3); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
   .contact-link-label { font-size: 0.72rem; color: var(--muted); font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.1em; }
   .contact-link-value { font-size: 0.9rem; color: var(--white); font-weight: 500; margin-top: 0.15rem; }
- 
+
   footer { padding: 2rem 4rem; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; background: var(--bg); }
   footer p { font-size: 0.8rem; color: var(--muted); font-family: 'JetBrains Mono', monospace; }
- 
+
   @keyframes fadeUp { from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)} }
   .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
   .reveal.visible { opacity: 1; transform: translateY(0); }
   ::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--bg3);border-radius:3px}
- 
+
   @media(max-width:900px){
     nav{padding:1rem 1.5rem}.nav-links{display:none}
     section{padding:4rem 1.5rem}#hero{padding:7rem 1.5rem 3rem}
@@ -211,17 +232,23 @@
     .extra-card-featured{grid-column:span 1}.extra-videos-grid{grid-template-columns:1fr}
     .card-photos{grid-template-columns:1fr}.extra-photos.two{grid-template-columns:1fr}
     footer{flex-direction:column;gap:0.5rem;text-align:center}
+    .greenhouse-hero{grid-template-columns:1fr}
+    .greenhouse-features{grid-template-columns:1fr}
+    .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  }
+  @media(min-width:900px) and (max-width:1200px){
+    .gallery-grid{grid-template-columns:repeat(3,1fr)}
   }
 </style>
 </head>
 <body>
- 
+
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
   <button class="lightbox-close" onclick="closeLightbox()">✕</button>
   <img id="lightbox-img" src="" alt="">
 </div>
- 
+
 <!-- NAV -->
 <nav>
   <div class="nav-logo">AB.</div>
@@ -229,11 +256,12 @@
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#greenhouse">Greenhouse</a></li>
     <li><a href="#extracurriculars">Extracurriculars</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
- 
+
 <!-- HERO -->
 <section id="hero">
   <div class="hero-bg-orb orb1"></div>
@@ -262,7 +290,7 @@
     </div>
   </div>
 </section>
- 
+
 <!-- ABOUT -->
 <section id="about">
   <div class="section-inner">
@@ -283,7 +311,7 @@
     </div>
   </div>
 </section>
- 
+
 <!-- SKILLS -->
 <section id="skills">
   <div class="section-inner">
@@ -298,7 +326,7 @@
     </div>
   </div>
 </section>
- 
+
 <!-- PROJECTS -->
 <section id="projects">
   <div class="section-inner">
@@ -314,7 +342,7 @@
       <button class="filter-btn" onclick="filterProjects('automation',this)">Automation</button>
     </div>
     <div class="projects-grid">
- 
+
       <!-- Cartesian Robot — 2 YouTube videos -->
       <div class="project-card reveal" data-tags="embedded robotics control">
         <div class="extra-videos-grid" style="border-bottom:1px solid var(--border)">
@@ -338,7 +366,7 @@
           </div>
         </div>
       </div>
- 
+
 <!-- Autonomous Robot — 2 videos (simulation + real) -->
 <div class="project-card reveal" data-tags="robotics ml embedded">
   <!-- Two‑video grid -->
@@ -367,7 +395,7 @@
     </div>
   </div>
 </div>
- 
+
       <!-- EMG — video + 2 photos -->
       <div class="project-card reveal" data-tags="bio control">
         <div class="project-video-thumb">
@@ -395,7 +423,7 @@
           </div>
         </div>
       </div>
- 
+
       <!-- PID Cart — 2 photos -->
       <div class="project-card reveal" data-tags="control">
         <div class="card-photos">
@@ -419,7 +447,7 @@
           </div>
         </div>
       </div>
- 
+
       <!-- PLC Production Line — YouTube video -->
       <div class="project-card reveal" data-tags="automation">
         <div class="project-video-thumb">
@@ -434,7 +462,7 @@
           <div class="project-actions"><button class="proj-btn proj-btn-primary" onclick="openModal('modal-plc')">Details</button></div>
         </div>
       </div>
- 
+
       <!-- PID Level Control — 1 photo -->
       <div class="project-card reveal" data-tags="automation control">
         <div class="card-photos single">
@@ -454,7 +482,7 @@
           </div>
         </div>
       </div>
- 
+
       <!-- UCLan LabVIEW — 2 photos -->
       <div class="project-card reveal" data-tags="automation ml">
         <div class="card-photos">
@@ -475,7 +503,7 @@
           <div class="project-actions"><button class="proj-btn proj-btn-primary" onclick="openModal('modal-uclan-proj')">Details</button></div>
         </div>
       </div>
- 
+
       <!-- Garrio LLC — 2 photos -->
       <div class="project-card reveal" data-tags="embedded">
         <div class="card-photos">
@@ -496,18 +524,83 @@
           <div class="project-actions"><button class="proj-btn proj-btn-primary" onclick="openModal('modal-garrio')">Details</button></div>
         </div>
       </div>
- 
+
     </div>
   </div>
 </section>
- 
+
+<!-- GREENHOUSE -->
+<section id="greenhouse">
+  <div class="section-inner">
+    <div class="section-label">// sustainability venture</div>
+    <h2 class="section-title">The <span>Greenhouse</span> Project</h2>
+
+    <div class="greenhouse-hero reveal">
+      <div class="greenhouse-text">
+        <p>Since mid-2025 I've led the data and software platform behind the <strong>Smart Greenhouse Monitoring & Control System</strong> — an open-source IoT platform, built at Ain Shams University, that turns a low-cost ESP32 sensor kit into a shared, AI-assisted monitoring system for sustainable growing.</p>
+        <p>Every team's kit reports temperature, humidity, and soil moisture straight to a shared cloud database. A live dashboard shows every kit side by side, and a pooled anomaly-detection model learns what "normal" looks like across the whole group — flagging any kit drifting out of range before anyone notices by eye. An AI plant-health module screens uploaded growth photos for early disease signs.</p>
+        <p>I designed and delivered a <strong>3-day hands-on training program</strong> (with Nature Eye Labs, under the Urban GreenLab initiative) that took 15–30 engineering students from raw electronics through IoT to a live, working deployment — then open-sourced the entire stack on GitHub so any institution can replicate it.</p>
+        <div class="greenhouse-links">
+          <a href="https://github.com/behiry-design/Urban-Green-Lab" target="_blank" class="btn btn-primary">⌥ View on GitHub</a>
+          <a href="https://behiry-design.github.io/greenhouse-training/" target="_blank" class="btn btn-outline">↗ Live Dashboard</a>
+        </div>
+      </div>
+      <div class="greenhouse-stats">
+        <div class="stat-card"><div class="stat-number">15–30</div><div class="stat-label">students trained on a deployed IoT platform</div></div>
+        <div class="stat-card"><div class="stat-number">100%</div><div class="stat-label">open-source — free for any institution to replicate</div></div>
+        <div class="stat-card"><div class="stat-number">2025</div><div class="stat-label">platform built and deployed, Ain Shams University</div></div>
+        <div class="stat-card"><div class="stat-number">3-day</div><div class="stat-label">hands-on training program designed and delivered</div></div>
+      </div>
+    </div>
+
+    <div class="greenhouse-features">
+      <div class="feature-card">
+        <div class="feature-icon">☁️</div>
+        <h4>Cloud Data Platform</h4>
+        <p>Dashboard, database architecture, and a pooled anomaly-detection model flagging abnormal plant/environmental conditions in real time across every deployed kit.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌿</div>
+        <h4>AI Plant-Health Screening</h4>
+        <p>An image-analysis module that screens uploaded growth photos for early disease signs, supporting data-driven crop decisions.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎓</div>
+        <h4>Student Training Program</h4>
+        <p>A 3-day hands-on curriculum — build, connect, program, test — taking engineering students from raw electronics to a live deployed system.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔓</div>
+        <h4>Fully Open-Source</h4>
+        <p>Firmware, database schema, dashboard, and model all published on GitHub so any institution can replicate the platform for its own program.</p>
+      </div>
+    </div>
+
+    <div class="gallery-label">// gallery</div>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="greenhouse_1.jpg" alt="Greenhouse photo 1" onclick="openLightbox('greenhouse_1.jpg')" onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'><span>🌱</span><p>greenhouse_1.jpg</p></div>'"></div>
+      <div class="gallery-item"><img src="greenhouse_2.jpg" alt="Greenhouse photo 2" onclick="openLightbox('greenhouse_2.jpg')" onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'><span>🌱</span><p>greenhouse_2.jpg</p></div>'"></div>
+      <div class="gallery-item"><img src="greenhouse_3.jpg" alt="Greenhouse photo 3" onclick="openLightbox('greenhouse_3.jpg')" onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'><span>🌱</span><p>greenhouse_3.jpg</p></div>'"></div>
+      <div class="gallery-item"><img src="greenhouse_4.jpg" alt="Greenhouse photo 4" onclick="openLightbox('greenhouse_4.jpg')" onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'><span>🌱</span><p>greenhouse_4.jpg</p></div>'"></div>
+      <div class="gallery-item"><img src="greenhouse_5.jpg" alt="Greenhouse photo 5" onclick="openLightbox('greenhouse_5.jpg')" onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'><span>🌱</span><p>greenhouse_5.jpg</p></div>'"></div>
+      <div class="gallery-item"><img src="greenhouse_6.jpg" alt="Greenhouse photo 6" onclick="openLightbox('greenhouse_6.jpg')" onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'><span>🌱</span><p>greenhouse_6.jpg</p></div>'"></div>
+      <div class="gallery-item"><img src="greenhouse_7.jpg" alt="Greenhouse photo 7" onclick="openLightbox('greenhouse_7.jpg')" onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'><span>🌱</span><p>greenhouse_7.jpg</p></div>'"></div>
+      <div class="gallery-item"><img src="greenhouse_8.jpg" alt="Greenhouse photo 8" onclick="openLightbox('greenhouse_8.jpg')" onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'><span>🌱</span><p>greenhouse_8.jpg</p></div>'"></div>
+      <div class="gallery-item"><img src="greenhouse_9.jpg" alt="Greenhouse photo 9" onclick="openLightbox('greenhouse_9.jpg')" onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'><span>🌱</span><p>greenhouse_9.jpg</p></div>'"></div>
+      <div class="gallery-item"><img src="greenhouse_10.jpg" alt="Greenhouse photo 10" onclick="openLightbox('greenhouse_10.jpg')" onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'><span>🌱</span><p>greenhouse_10.jpg</p></div>'"></div>
+      <div class="gallery-item"><img src="greenhouse_11.jpg" alt="Greenhouse photo 11" onclick="openLightbox('greenhouse_11.jpg')" onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'><span>🌱</span><p>greenhouse_11.jpg</p></div>'"></div>
+      <div class="gallery-item"><img src="greenhouse_12.jpg" alt="Greenhouse photo 12" onclick="openLightbox('greenhouse_12.jpg')" onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'><span>🌱</span><p>greenhouse_12.jpg</p></div>'"></div>
+    </div>
+  </div>
+</section>
+
 <!-- EXTRACURRICULAR ACTIVITIES -->
 <section id="extracurriculars">
   <div class="section-inner">
     <div class="section-label">// beyond the lab</div>
     <h2 class="section-title">Extracurricular <span>Activities</span></h2>
     <div class="extra-grid">
- 
+
       <!-- TU Berlin Featured — 4 videos + certificate -->
       <div class="extra-card extra-card-featured reveal">
         <div class="extra-videos-grid">
@@ -541,7 +634,7 @@
           </div>
         </div>
       </div>
- 
+
       <!-- UCLan Programme — 1 photo + certificate -->
       <div class="extra-card reveal">
         <div class="extra-photos two">
@@ -568,7 +661,7 @@
           </div>
         </div>
       </div>
- 
+
       <!-- UNDP — 2 photos + certificate -->
       <div class="extra-card reveal">
         <div class="extra-photos two">
@@ -595,7 +688,7 @@
           </div>
         </div>
       </div>
- 
+
       <!-- Oceastic — 1 photo + certificate -->
       <div class="extra-card reveal">
         <div class="extra-photos two">
@@ -626,7 +719,7 @@
           </div>
         </div>
       </div>
- 
+
       <!-- GIZ × British Council — certificate only -->
       <div class="extra-card reveal">
         <div class="extra-body" style="padding-top:2rem">
@@ -643,7 +736,7 @@
           </div>
         </div>
       </div>
- 
+
       <!-- Luban Workshop — 2 photos + certificate -->
       <div class="extra-card reveal">
         <div class="extra-photos two">
@@ -670,11 +763,11 @@
           </div>
         </div>
       </div>
- 
+
     </div>
   </div>
 </section>
- 
+
 <!-- CONTACT -->
 <section id="contact">
   <div class="section-inner">
@@ -701,12 +794,12 @@
     </div>
   </div>
 </section>
- 
+
 <footer>
   <p>© 2026 Ahmed Mohamed Behiry</p>
   <p>Ain Shams University · Mechatronics & Automation Engineering</p>
 </footer>
- 
+
 <!-- MODALS -->
 <div class="modal-overlay" id="modal-cartesian" onclick="closeModalOutside(event,'modal-cartesian')">
   <div class="modal"><div class="modal-header"><div><div style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);margin-bottom:0.3rem">MCT331 · Design of Mechatronics 1 · Oct–Dec 2025</div><div style="font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;color:var(--white)">Cartesian Robotic Sorting & Assembly System</div></div><button class="modal-close" onclick="closeModal('modal-cartesian')">✕</button></div>
@@ -718,7 +811,7 @@
     <h4>Tools</h4><p>SolidWorks · MATLAB Simscape · Stateflow · FreeRTOS · ESP32 · ESP-NOW · C/C++</p>
   </div></div>
 </div>
- 
+
 <div class="modal-overlay" id="modal-emg" onclick="closeModalOutside(event,'modal-emg')">
   <div class="modal"><div class="modal-header"><div><div style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);margin-bottom:0.3rem">MCT343 · Intro to Biomechatronics · Dec 2025–Jan 2026</div><div style="font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;color:var(--white)">EMG-Based Prosthetic Hand Control</div></div><button class="modal-close" onclick="closeModal('modal-emg')">✕</button></div>
   <div class="modal-body">
@@ -728,7 +821,7 @@
     <h4>Tools</h4><p>Python · NumPy · MATLAB · Simulink · Simscape Multibody · Stateflow · Delsys Trigno</p>
   </div></div>
 </div>
- 
+
 <div class="modal-overlay" id="modal-pid" onclick="closeModalOutside(event,'modal-pid')">
   <div class="modal"><div class="modal-header"><div><div style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);margin-bottom:0.3rem">MCT211 · Automatic Control · Mar–Apr 2025</div><div style="font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;color:var(--white)">Cascaded PID Cart Control</div></div><button class="modal-close" onclick="closeModal('modal-pid')">✕</button></div>
   <div class="modal-body">
@@ -737,7 +830,7 @@
     <h4>Tools</h4><p>MATLAB · Simulink · Parameter Estimation · PID · H-Bridge · Encoder</p>
   </div></div>
 </div>
- 
+
 <div class="modal-overlay" id="modal-plc" onclick="closeModalOutside(event,'modal-plc')">
   <div class="modal"><div class="modal-header"><div><div style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);margin-bottom:0.3rem">MCT313 · Industrial Automation · Feb 2026–Present</div><div style="font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;color:var(--white)">PLC-Controlled Production Line</div></div><button class="modal-close" onclick="closeModal('modal-plc')">✕</button></div>
   <div class="modal-body">
@@ -745,7 +838,7 @@
     <h4>Tools</h4><p>TIA Portal V16 · S7-1500 · S7-PLCSIM · Factory I/O · KTP700 · Ladder Logic</p>
   </div></div>
 </div>
- 
+
 <div class="modal-overlay" id="modal-tia" onclick="closeModalOutside(event,'modal-tia')">
   <div class="modal"><div class="modal-header"><div><div style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);margin-bottom:0.3rem">MCT313 · Industrial Automation · Feb 2026–Present</div><div style="font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;color:var(--white)">PID Tank Level Control</div></div><button class="modal-close" onclick="closeModal('modal-tia')">✕</button></div>
   <div class="modal-body">
@@ -753,7 +846,7 @@
     <h4>Tools</h4><p>TIA Portal V16 · S7-1500 · S7-PLCSIM · Factory I/O · KTP700 · PID_Compact · OB30</p>
   </div></div>
 </div>
- 
+
 <div class="modal-overlay" id="modal-uclan-proj" onclick="closeModalOutside(event,'modal-uclan-proj')">
   <div class="modal"><div class="modal-header"><div><div style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);margin-bottom:0.3rem">UCLan · Preston, UK · Jul 2025</div><div style="font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;color:var(--white)">Machine Vision SOS Detection System</div></div><button class="modal-close" onclick="closeModal('modal-uclan-proj')">✕</button></div>
   <div class="modal-body">
@@ -761,7 +854,7 @@
     <h4>Tools</h4><p>LabVIEW · NI Vision · NI DAQ · NI MyRIO · Color Segmentation</p>
   </div></div>
 </div>
- 
+
 <div class="modal-overlay" id="modal-garrio" onclick="closeModalOutside(event,'modal-garrio')">
   <div class="modal"><div class="modal-header"><div><div style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);margin-bottom:0.3rem">Garrio LLC · Aug–Sep 2024 · Cairo, Egypt</div><div style="font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;color:var(--white)">ARM Microcontroller & Interfacing Internship</div></div><button class="modal-close" onclick="closeModal('modal-garrio')">✕</button></div>
   <div class="modal-body">
@@ -769,7 +862,7 @@
     <h4>Tools</h4><p>ARM Cortex-M · Embedded C · Keil µVision · IAR EW · UART · I2C · SPI</p>
   </div></div>
 </div>
- 
+
 <script>
   // LIGHTBOX
   function openLightbox(src) {
@@ -781,7 +874,7 @@
     document.getElementById('lightbox').classList.remove('open');
     document.body.style.overflow = '';
   }
- 
+
   // FILTER
   function filterProjects(tag, btn) {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -790,12 +883,12 @@
       card.classList.toggle('hidden', tag !== 'all' && !card.dataset.tags.includes(tag));
     });
   }
- 
+
   // MODALS
   function openModal(id) { document.getElementById(id).classList.add('open'); document.body.style.overflow = 'hidden'; }
   function closeModal(id) { document.getElementById(id).classList.remove('open'); document.body.style.overflow = ''; }
   function closeModalOutside(e, id) { if (e.target === document.getElementById(id)) closeModal(id); }
- 
+
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
       document.querySelectorAll('.modal-overlay.open').forEach(m => { m.classList.remove('open'); });
@@ -803,7 +896,7 @@
       document.body.style.overflow = '';
     }
   });
- 
+
   // SCROLL REVEAL
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => { if (entry.isIntersecting) setTimeout(() => entry.target.classList.add('visible'), i * 80); });
